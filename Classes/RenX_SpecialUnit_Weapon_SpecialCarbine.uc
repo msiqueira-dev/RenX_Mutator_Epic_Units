@@ -5,7 +5,9 @@ defaultproperties
 	CustomWeaponName = "Special Carbine";
 	WeaponRange=3800.0
 	ClipSize = 42
-	
+	InstantHitDamage(0)=20
+	InstantHitDamage(1)=20 
+
 	/*******************/
 	/*Veterancy*/
 	/******************/

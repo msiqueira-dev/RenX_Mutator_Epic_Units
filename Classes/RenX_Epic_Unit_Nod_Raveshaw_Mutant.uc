@@ -1,25 +1,18 @@
-class RenX_SpecialUnit_GDI_Armoured_Sydney extends Rx_FamilyInfo_GDI_Sydney_Suit;
+class RenX_Epic_Unit_Nod_Raveshaw_Mutant extends Rx_FamilyInfo_Nod_Raveshaw_Mutant;
 
 DefaultProperties
 {
-	HealPointsMultiplier    = 0.031428f
-	PointsForKill           = 43.75f
-	MaxHealth               = 100
-	MaxArmor               	= 600
-	Armor_Type 				= A_FLAK
-	SpeedMultiplier			= 0.98
-	bFemale					= true;
-	FallspeedModifier       = 1.0
-	
-	/*PT Block Info*/
-	/*------------*/
+	MaxHealth               = 600
+	MaxArmor               	= 100
+	SpeedMultiplier			= 1.10
+	JumpMultiplier          = 2.0
+
 	BasePurchaseCost		= 2500
-	bHighTier				= true
 	PT_Damage			= 6
 	PT_Range			= 5
 	PT_RateOfFire		= 2
 	PT_MagazineCapacity = 2
-	/*---------------*/
+	
 	ImmuneTo[0] = class'Rx_DmgType_Tiberium'
 	ImmuneTo[1] = class'Rx_DmgType_TiberiumBleed'
 	ImmuneTo[2] = class'Rx_DmgType_ChemicalThrower'
@@ -29,7 +22,6 @@ DefaultProperties
 	/***********/
 	/*Veterancy*/
 	/***********/
-	
 	VPCost(0) = 25
 	VPCost(1) = 50
 	VPCost(2) = 110
@@ -47,11 +39,11 @@ DefaultProperties
 	
 	//+X
 	Vet_SprintSpeedMod(0)=0
-	Vet_SprintSpeedMod(1)=0.025
-	Vet_SprintSpeedMod(2)=0.05
-	Vet_SprintSpeedMod(3)=0.075
+	Vet_SprintSpeedMod(1)=0.030
+	Vet_SprintSpeedMod(2)=0.060
+	Vet_SprintSpeedMod(3)=0.085
 	
 	/******************/
-	PTString="Buy Commando Armoured Sydney"
-	PassiveAbilities(0)=class'RenX_SpecialUnit_PassiveAbility_ArmourRegen'
+	PTString="Buy Commando Mutant Raveshaw"
+	PassiveAbilities(0)=class'RenX_SpecialUnit_PassiveAbility_HealthRegen'
 }

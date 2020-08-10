@@ -1,4 +1,4 @@
-class RenX_SpecialUnit_Mutator extends Rx_Mutator;
+class RenX_Mutator_Epic_Units extends Rx_Mutator;
 /*
 *
     Author: Merak_Hagen
@@ -8,13 +8,6 @@ class RenX_SpecialUnit_Mutator extends Rx_Mutator;
         - Changes the guns used both by modified Armoured Sydney and Mutant Raveshaw to custom made version of
           Personal Ion Cannon and RailGun, add an extra weapon to each character, Armoured Sydney gets an
           Improved Carbine and Raveshaw get an Improved HeavyPistol
-
-    Run And Test: 
-    open CNC-Walls?mutator=RenX_SpecialUnit_Package.RenX_SpecialUnit_Mutator
-    UDK.exe CNC-Walls?mutator=RenX_SpecialUnit_Package.RenX_SpecialUnit_Mutator
-
-    Server:
-    E:/Games/Renegade_X_SDK-7634M/Development/Src/RenX_SpecialUnit_Package/Classes/RenX_SpecialUnit_Server_Test
 *
 */
 
@@ -39,6 +32,6 @@ function bool CheckReplacement(Actor Other)
 
 defaultproperties
 {
-   Name="RenX_SpecialUnit_Mutator"
+   Name="RenX_Mutator_Epic_Units"
    ObjectArchetype=UTMutator'utgame.Default__UTMutator'
 }

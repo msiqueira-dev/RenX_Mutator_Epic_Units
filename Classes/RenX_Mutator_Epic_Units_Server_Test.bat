@@ -1,12 +1,13 @@
 @echo off
 ::
+:: VARIABLES
 ::
 SET ServerName=Merak_Hagen_Epic_Unit
 SET Password=Test
 ::
+:: END OF VARIBLES
 ::
-::
-::
+
 setlocal enableextensions disabledelayedexpansion
 set "search=RenegadeXServer"
 set "replace=%ServerName%"
@@ -33,4 +34,4 @@ echo.
 echo %a%
 echo.
 %a%
-UDK.exe 127.0.0.1?password=%Password%
+::UDK.exe 127.0.0.1?password=%Password%
