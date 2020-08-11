@@ -1,19 +1,17 @@
-class RenX_SpecialUnit_Weapon_PersonalIonCannon extends Rx_Weapon_PersonalIonCannon;
+class RenX_Epic_Units_Weapon_Improved_PersonalIonCannon extends Rx_Weapon_PersonalIonCannon;
 
 DefaultProperties
 {		
 	CustomWeaponName = "Improved Personal Ion Cannon";
-	RecoilDelay = 0.06
     WeaponRange=6200.0
 	ClipSize = 1
     InitalNumClips = 51
     MaxClips = 51
-	BoltReloadTime(0) = 2.0f
-	BoltReloadTime(1) = 2.0f
-	FireDelayTime = 0.20
-	MaximumPiercingAbility  =  5
-	CurrentPiercingPower	=  5
-	Ammo_Increment = 4
+	BoltReloadTime(0) = 2.4f
+	BoltReloadTime(1) = 2.4f
+	FireInterval(0)=+0.9
+    FireInterval(1)=+0.9
+	FireDelayTime = 0.25
 	/*******************/
 	/*Veterancy*/
 	/******************/

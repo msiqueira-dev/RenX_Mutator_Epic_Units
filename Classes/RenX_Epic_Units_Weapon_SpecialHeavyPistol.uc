@@ -1,4 +1,4 @@
-class RenX_SpecialUnit_Weapon_SpecialHeavyPistol extends Rx_Weapon_HeavyPistol_Crate;
+class RenX_Epic_Units_Weapon_SpecialHeavyPistol extends Rx_Weapon_HeavyPistol_Crate;
 
 DefaultProperties
 {

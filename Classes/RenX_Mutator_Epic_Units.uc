@@ -13,19 +13,19 @@ class RenX_Mutator_Epic_Units extends Rx_Mutator;
 
 function bool CheckReplacement(Actor Other) 
 {
+    Rx_Game(WorldInfo.Game).DefaultPawnClass = class'RenX_Epic_Units_Pawn';
     if(Other.IsA('Rx_TeamInfo')) 
-    {  
-        Rx_Game(WorldInfo.Game).PurchaseSystemClass = class'RenX_SpecialUnit_PurchaseSystem';
-    }
+        Rx_Game(WorldInfo.Game).PurchaseSystemClass = class'RenX_Epic_Units_PurchaseSystem';
     if (Other.IsA('Rx_InventoryManager_GDI_Sydney_Suit'))
     {
-        Rx_InventoryManager_GDI_Sydney_Suit(Other).PrimaryWeapons[0] = class'RenX_SpecialUnit_Weapon_PersonalIonCannon';
-        Rx_InventoryManager_GDI_Sydney_Suit(Other).PrimaryWeapons[1] = class'RenX_SpecialUnit_Weapon_SpecialCarbine';
+        Rx_InventoryManager_GDI_Sydney_Suit(Other).PrimaryWeapons[0] = class'RenX_Epic_Units_Weapon_Improved_PersonalIonCannon';
+        Rx_InventoryManager_GDI_Sydney_Suit(Other).PrimaryWeapons[1] = class'RenX_Epic_Units_Weapon_SpecialCarbine';
+        Rx_InventoryManager_GDI_Sydney_Suit(Other).ExplosiveWeapons[0] = class'Rx_Weapon_TimedC4_Multiple';
     }
      if (Other.IsA('Rx_InventoryManager_Nod_Raveshaw_Mutant'))
     {
-        Rx_InventoryManager_Nod_Raveshaw_Mutant(Other).PrimaryWeapons[0] = class'RenX_SpecialUnit_Weapon_RailGun';
-        Rx_InventoryManager_Nod_Raveshaw_Mutant(Other).PrimaryWeapons[1] = class'RenX_SpecialUnit_Weapon_SpecialHeavyPistol';
+        Rx_InventoryManager_Nod_Raveshaw_Mutant(Other).PrimaryWeapons[0] = class'RenX_Epic_Units_Weapon_Improved_Railgun';
+        Rx_InventoryManager_Nod_Raveshaw_Mutant(Other).PrimaryWeapons[1] = class'RenX_Epic_Units_Weapon_SpecialHeavyPistol';
     }
     return true;
 }

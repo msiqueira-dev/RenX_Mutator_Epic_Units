@@ -1,4 +1,4 @@
-class RenX_SpecialUnit_Weapon_SpecialCarbine extends Rx_Weapon_Carbine;
+class RenX_Epic_Units_Weapon_SpecialCarbine extends Rx_Weapon_Carbine;
 
 defaultproperties
 {	

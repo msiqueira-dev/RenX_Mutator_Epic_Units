@@ -1,4 +1,4 @@
-class RenX_SpecialUnit_Weapon_RailGun extends Rx_Weapon_Railgun;
+class RenX_Epic_Units_Weapon_Improved_Railgun extends Rx_Weapon_Railgun;
 
 DefaultProperties
 {
@@ -13,7 +13,7 @@ DefaultProperties
     ClipSize = 4
     InitalNumClips = 14
     MaxClips = 14
-	FireDelayTime = 0.20
+	FireDelayTime = 0.25
 	
 	/*******************/
 	/*Veterancy*/
