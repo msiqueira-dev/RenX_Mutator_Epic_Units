@@ -40,6 +40,14 @@ function PurchaseCharacter(Rx_Controller Buyer, int TeamID, class<Rx_FamilyInfo>
 	super.PurchaseCharacter(Buyer, TeamID, CharacterClass);
 }
 
+simulated function bool IsItemBuyable (Rx_Controller Player, byte teamID, int charid)
+{
+	local class<Rx_Weapon> W;
+	W = GetItemClass(teamID, charid);
+
+	return Rx_InventoryManager(Player.Pawn.InvManager).IsItemAllowed(W) && W.static.IsBuyable(Player);
+}
+
 function PurchaseItem(Controller Buyer, int TeamID, int ItemID)
 {
 	if(ItemID == 3)
@@ -55,13 +63,10 @@ function PurchaseItem(Controller Buyer, int TeamID, int ItemID)
 simulated function UpdateMapSpecificInfantryClasses()
 {
     super.UpdateMapSpecificInfantryClasses();
-    GDIInfantryClasses[12] = class'RenX_Epic_Units_GDI_Armoured_Sydney';
-    NODInfantryClasses[12] = class'RenX_Epic_Units_Nod_Raveshaw_Mutant';
-	GDIInfantryClasses[15] = class'RenX_Epic_Units_GDI_Armoured_Sydney';
-	NODInfantryClasses[15] = class'RenX_Epic_Units_Nod_Raveshaw_Mutant';
 }
 
 DefaultProperties
 {
 	GDIItemClasses[3]  = class'RenX_Epic_Units_Dummy_Armoured_Sydney'
+	NODItemClasses[3]  = class'RenX_Epic_Units_Dummy_Mutant_Raveshaw'
 }
