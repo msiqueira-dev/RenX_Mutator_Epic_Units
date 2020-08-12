@@ -4,10 +4,10 @@ DefaultProperties
 {
 	MaxHealth               = 100
 	MaxArmor               	= 600
-	SpeedMultiplier			= 0.98
+	SpeedMultiplier			= 0.95
 	FallspeedModifier       = 2.0
 	
-	BasePurchaseCost		= 2500
+	BasePurchaseCost		= 2200
 	PT_Damage			= 6
 	PT_Range			= 5
 	PT_RateOfFire		= 2
@@ -18,6 +18,9 @@ DefaultProperties
 	ImmuneTo[2] = class'Rx_DmgType_ChemicalThrower'
 	ImmuneTo[3]	= class'Rx_DmgType_Tiberium_Blue'
 	ImmuneTo[4]	= class'Rx_DmgType_TiberiumAutoRifle'
+	ImmuneTo[5]	= class'Rx_DmgType_RanOver'
+
+	InvManagerClass = class'RenX_Epic_Units_InventoryManager_GDI_Armoured_Sydney'
 	
 	/***********/
 	/*Veterancy*/

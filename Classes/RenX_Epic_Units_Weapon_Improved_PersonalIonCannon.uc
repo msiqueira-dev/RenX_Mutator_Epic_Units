@@ -5,8 +5,8 @@ DefaultProperties
 	CustomWeaponName = "Improved Personal Ion Cannon";
     WeaponRange=6200.0
 	ClipSize = 1
-    InitalNumClips = 51
-    MaxClips = 51
+    InitalNumClips = 53
+    MaxClips = 53
 	BoltReloadTime(0) = 2.4f
 	BoltReloadTime(1) = 2.4f
 	FireInterval(0)=+0.9
@@ -27,9 +27,9 @@ DefaultProperties
 	Vet_ROFModifier(3) = 1.0 
 	
 	Vet_ClipSizeModifier(0)=0 //Normal (should be 1)	
-	Vet_ClipSizeModifier(1)=1.1 //Veteran 
-	Vet_ClipSizeModifier(2)=1.2 //Elite
-	Vet_ClipSizeModifier(3)=1.3 //Heroic
+	Vet_ClipSizeModifier(1)=0 //Veteran 
+	Vet_ClipSizeModifier(2)=1.1 //Elite
+	Vet_ClipSizeModifier(3)=1.2 //Heroic
 
 	Vet_ReloadSpeedModifier(0)=1 //Normal (should be 1)
 	Vet_ReloadSpeedModifier(1)=0.90 //Veteran 

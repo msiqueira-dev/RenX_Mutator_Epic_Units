@@ -40,14 +40,28 @@ function PurchaseCharacter(Rx_Controller Buyer, int TeamID, class<Rx_FamilyInfo>
 	super.PurchaseCharacter(Buyer, TeamID, CharacterClass);
 }
 
+function PurchaseItem(Controller Buyer, int TeamID, int ItemID)
+{
+	if(ItemID == 3)
+	{
+		if (TeamID == Team_GDI)
+			PurchaseCharacter(Rx_Controller(Buyer), TeamID, class'RenX_Epic_Units_GDI_Armoured_Sydney');
+		else if(TeamID == TEAM_NOD)
+			PurchaseCharacter(Rx_Controller(Buyer), TeamID, class'RenX_Epic_Units_Nod_Raveshaw_Mutant');
+	}
+	else super.PurchaseItem(Buyer, TeamID, ItemID);
+}
+
 simulated function UpdateMapSpecificInfantryClasses()
 {
     super.UpdateMapSpecificInfantryClasses();
     GDIInfantryClasses[12] = class'RenX_Epic_Units_GDI_Armoured_Sydney';
     NODInfantryClasses[12] = class'RenX_Epic_Units_Nod_Raveshaw_Mutant';
+	GDIInfantryClasses[15] = class'RenX_Epic_Units_GDI_Armoured_Sydney';
+	NODInfantryClasses[15] = class'RenX_Epic_Units_Nod_Raveshaw_Mutant';
 }
 
 DefaultProperties
 {
-    
+	GDIItemClasses[3]  = class'RenX_Epic_Units_Dummy_Armoured_Sydney'
 }
