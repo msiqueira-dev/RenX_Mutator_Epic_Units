@@ -2,7 +2,6 @@ class RenX_Epic_Units_Dummy_Armoured_Sydney extends Rx_Weapon_RepairTool;
 
 simulated static function bool IsBuyable(Rx_Controller C)
 {
-
     foreach `WorldInfoObject.AllControllers(class'Rx_Controller', C)
     {
         if(Rx_Pawn(C.Pawn).GetRxFamilyInfo() == class'RenX_Epic_Units_GDI_Armoured_Sydney')

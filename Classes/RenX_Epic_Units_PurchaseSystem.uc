@@ -44,7 +44,9 @@ simulated function bool IsItemBuyable (Rx_Controller Player, byte teamID, int ch
 {
 	local class<Rx_Weapon> W;
 	W = GetItemClass(teamID, charid);
-
+	if(AreHighTierPayClassesDisabled(teamID) && 
+	  (W==class'RenX_Epic_Units_Dummy_Mutant_Raveshaw' || W==class'RenX_Epic_Units_Dummy_Armoured_Sydney'))
+		return false;
 	return Rx_InventoryManager(Player.Pawn.InvManager).IsItemAllowed(W) && W.static.IsBuyable(Player);
 }
 

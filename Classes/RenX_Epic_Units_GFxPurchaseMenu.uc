@@ -25,4 +25,6 @@ function TickHUD()
 
 DefaultProperties
 {
+	GDIMainMenuData(8) = (BlockType=EPBT_MENU,  id=-1, PTIconTexture=Texture2D'RenXPurchaseMenu.T_Icon_ItemsNod', iconID=04, hotkey="Q", title="Items and More", desc="\n\nSuperweapons\nEquipments\nEpic Unit",														cost="MENU", type=1 )
+	NodMainMenuData(8) = (BlockType=EPBT_MENU,  id=-1, PTIconTexture=Texture2D'RenXPurchaseMenu.T_Icon_ItemsNod', iconID=04, hotkey="Q", title="Items and More", desc="\n\nSuperweapons\nEquipments\nEpic Unit",														cost="MENU", type=1 )
 }

@@ -5,7 +5,7 @@ Mutator for Renegade-X Game to make available in game purchase of GDI Amoured Sy
 # Current Epic Units Stats:
 </br>
 - Armoured Sydney:</br>
-    &emsp;Price: 2.500 Credits</br>
+    &emsp;Price: 2.200 Credits</br>
     &emsp;Health: 100</br>
     &emsp;Armor: 600</br>
     &emsp;Base Speed: 0.95</br>
@@ -33,7 +33,7 @@ Mutator for Renegade-X Game to make available in game purchase of GDI Amoured Sy
         &emsp;&emsp;One available per team</br>
 </br>
 - Mutant Raveshaw:</br>
-    &emsp;Price: 2.500 Credits</br>
+    &emsp;Price: 2.200 Credits</br>
     &emsp;Health: 600</br>
     &emsp;Armor: 100</br>
     &emsp;Base Speed: 1.12</br>
