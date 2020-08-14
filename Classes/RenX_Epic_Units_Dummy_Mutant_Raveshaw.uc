@@ -4,7 +4,8 @@ simulated static function bool IsBuyable(Rx_Controller C)
 {
     foreach `WorldInfoObject.AllControllers(class'Rx_Controller', C)
     {
-        if(Rx_Pawn(C.Pawn).GetRxFamilyInfo() == class'RenX_Epic_Units_Nod_Raveshaw_Mutant')
+        if(Rx_Pawn(C.Pawn).GetRxFamilyInfo() == class'RenX_Epic_Units_Nod_Raveshaw_Mutant' ||
+           Rx_Pawn(C.Pawn).GetRxFamilyInfo() == class'RenX_Epic_Units_Dummy_Mutant_Raveshaw')
         {
             return false;
         }
@@ -30,6 +31,6 @@ simulated static function string GetPurchaseDescription()
 DefaultProperties
 {
     CustomWeaponName = "Mutant Raveshaw";
-    Price = 2200;
+    Price = 2500;
     PTIconTexture = Texture2D'RenXPurchaseMenu.T_Icon_Weapon_Railgun';
 }

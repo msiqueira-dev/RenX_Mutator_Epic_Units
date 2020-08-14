@@ -4,11 +4,11 @@ DefaultProperties
 {
 	MaxHealth               = 600
 	MaxArmor               	= 100
-	SpeedMultiplier			= 1.12
-	JumpMultiplier          = 2.0
-	FallspeedModifier       = 1.1
+	SpeedMultiplier			= 1.15
+	JumpMultiplier          = 1.5
+	FallspeedModifier       = 1.0
 
-	BasePurchaseCost		= 2200
+	BasePurchaseCost		= 2500
 	PT_Damage			= 6
 	PT_Range			= 5
 	PT_RateOfFire		= 2
@@ -20,6 +20,7 @@ DefaultProperties
 	ImmuneTo[3]	= class'Rx_DmgType_Tiberium_Blue'
 	ImmuneTo[4]	= class'Rx_DmgType_TiberiumAutoRifle'
 	ImmuneTo[5]	= class'Rx_DmgType_RanOver'
+	ImmuneTo[6]	= class'Rx_DmgType_Pancake'
 
 	InvManagerClass = class'RenX_Epic_Units_InventoryManager_NOD_Mutant_Raveshaw'
 	

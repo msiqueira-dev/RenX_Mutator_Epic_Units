@@ -9,12 +9,11 @@ simulated function bool TakeHeadShot(const out ImpactInfo Impact, class<DamageTy
     PC = PlayerController(Controller);
     if(PC != None)
     {
-        if(Rx_Pawn(PC.Pawn).GetRxFamilyInfo() != class'RenX_Epic_Units_GDI_Armoured_Sydney' &&
-        Rx_Pawn(PC.Pawn).GetRxFamilyInfo() != class'RenX_Epic_Units_Nod_Raveshaw_Mutant')
-            return super.TakeHeadShot(Impact, HeadShotDamageType, HeadDamage,AdditionalScale,InstigatingController, bRocketDamage, ProjectileWeapon);
-        else return false;
+        if(Rx_Pawn(PC.Pawn).GetRxFamilyInfo() == class'RenX_Epic_Units_GDI_Armoured_Sydney' ||
+        Rx_Pawn(PC.Pawn).GetRxFamilyInfo() == class'RenX_Epic_Units_Nod_Raveshaw_Mutant')
+            return false;
     }
-    else return false;
+    return super.TakeHeadShot(Impact, HeadShotDamageType, HeadDamage,AdditionalScale,InstigatingController, bRocketDamage, ProjectileWeapon);
 }
 
 simulated function Tick(float DeltaTime)
@@ -27,6 +26,11 @@ simulated function Tick(float DeltaTime)
         {
             StaminaRegenRate=25.0f;
             SprintSpeed=460.0;
+        }
+        else if(Rx_Pawn(PC.Pawn).GetRxFamilyInfo() != class'RenX_Epic_Units_GDI_Armoured_Sydney')
+        {
+            StaminaRegenRate=8.0f;
+            SprintSpeed=400.0;
         }
     }
 	super.Tick(DeltaTime);

@@ -5,11 +5,16 @@ Mutator for Renegade-X Game to make available in game purchase of GDI Amoured Sy
 # Current Epic Units Stats:
 </br>
 - Armoured Sydney:</br>
-    &emsp;Price: 2.200 Credits</br>
+    &emsp;&emsp;Descritpion: Armoured Sydney is a tech unit, anti everything, focused on benefits of an armour tech suit.
+    While the armor is heavy, it offers protection, and some abilities of its own. Because she is wearing a heavy suit, she
+    will get slower and feel it heavy, but will have a lot of improvements from it</br>
+    &emsp;Price: 2.500 Credits</br>
     &emsp;Health: 100</br>
     &emsp;Armor: 600</br>
     &emsp;Base Speed: 0.95</br>
     &emsp;Fall Speed Modifier: 2.0</br>
+    &emsp;Stamina Regen Rate:8.0 (Common units are 10.0)</br>
+    &emsp;Sprint Speed:400.0 (Common units are 420)</br>
     &emsp;Passive Ability:</br>
         &emsp;&emsp;Regen 5 Armor every 2 seconds.</br>
         &emsp;&emsp;Immunity to Tiberium fields and Tiberium Weapons</br>
@@ -21,7 +26,7 @@ Mutator for Renegade-X Game to make available in game purchase of GDI Amoured Sy
         &emsp;&emsp;Improved EMP Grenade (Cooldown decreased to 40 seconds)</br>
         &emsp;&emsp;Double Timed C4s</br>
         &emsp;&emsp;Tiberium AutoRifle (as default)</br>
-    &emsp;Improvement from Crate Armoured Sydney:</br>
+    &emsp;Improvements and modifications from Crate Armoured Sydney:</br>
         &emsp;&emsp;Improved Weapons and Extra Weapons</br>
         &emsp;&emsp;More Ammunition</br>
         &emsp;&emsp;More Armour</br>
@@ -29,16 +34,22 @@ Mutator for Renegade-X Game to make available in game purchase of GDI Amoured Sy
         &emsp;&emsp;Headshot extra damage Immunity</br>
         &emsp;&emsp;Ran Over by Vehicle Immunity</br>
         &emsp;&emsp;Less Fall Damage</br>
+        &emsp;&emsp;Sprint is slower (Sprint is used by shift key)</br>
+        &emsp;&emsp;Stamina regeneration rate is slower</br>
     &emsp;Retrictions:</br>
         &emsp;&emsp;One available per team</br>
 </br>
 - Mutant Raveshaw:</br>
-    &emsp;Price: 2.200 Credits</br>
+    &emsp;&emsp;Descritpion: A mutant, genetic modifed unit, a super human, being able to be faster, to jump higher, and have
+    much more mobility than any other human</br>
+    &emsp;Price: 2.500 Credits</br>
     &emsp;Health: 600</br>
     &emsp;Armor: 100</br>
-    &emsp;Base Speed: 1.12</br>
+    &emsp;Base Speed: 1.15</br>
     &emsp;Fall Speed Modifier: 1.1</br>
-    &emsp;Jump Modifier: 2.0</br>
+    &emsp;Jump Modifier: 1.5</br>
+    &emsp;Stamina Regen Rate:25.0</br>
+    &emsp;Sprint Speed:460.0;</br>
     &emsp;Passive Ability:</br>
         &emsp;&emsp;Regen 5 Health every 2 seconds.</br>
         &emsp;&emsp;Stamina Regen rate is 25.0 (Normal is 10).</br>
