@@ -5,13 +5,10 @@ var const float MaxStaminaMutantRaveshaw;
 
 simulated function bool TakeHeadShot(const out ImpactInfo Impact, class<DamageType> HeadShotDamageType, int HeadDamage, float AdditionalScale, controller InstigatingController, bool bRocketDamage, optional Weapon ProjectileWeapon)
 {
-    local PlayerController PC;
-    PC = PlayerController(Controller);
-    //Rx_Game(WorldInfo.Game).CTextBroadCast(3, "Test Headshot: " @ Rx_Pawn(PC.Pawn).GetRxFamilyInfo(),'Yellow', 60.0, 3.0);
-    if(PC != None)
+    if(InstigatingController != None)
     {
-        if(Rx_Pawn(PC.Pawn).GetRxFamilyInfo() == class'RenX_Epic_Units_GDI_Armoured_Sydney' ||
-        Rx_Pawn(PC.Pawn).GetRxFamilyInfo() == class'RenX_Epic_Units_Nod_Raveshaw_Mutant')
+        if(Rx_Pawn(InstigatingController.Pawn).GetRxFamilyInfo() == class'RenX_Epic_Units_GDI_Armoured_Sydney' ||
+        Rx_Pawn(InstigatingController.Pawn).GetRxFamilyInfo() == class'RenX_Epic_Units_Nod_Raveshaw_Mutant')
             return false;
     }
     return super.TakeHeadShot(Impact, HeadShotDamageType, HeadDamage,AdditionalScale,InstigatingController, bRocketDamage, ProjectileWeapon);

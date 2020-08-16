@@ -18,29 +18,37 @@ SET UDK_PATH=E:\Games\Renegade_X_SDK-7634M\
 ::
 
 SET IniFileAux=%INI_FILE%.aux
-SET MutatorWithPackageName=%MUTATOR_NAME%.%MUTATOR_PACKAGE_NAME% 
-SET MutatorIniFile=+ModEditPackages=%MUTATOR_PACKAGE_NAME%
+SET MutatorIniFilePhrase=+ModEditPackages=%MUTATOR_PACKAGE_NAME%
+SET MutatorIniFilePhraseComment=;%MUTATOR_PACKAGE_NAME%
 SET UdkFolderCompiledMutator=%UDK_PATH%UDKGame\Script\%MUTATOR_NAME%.u
 SET RenXPathCompiledMutator=%RENX_PATH%UDKGame\CookedPC\%MUTATOR_NAME%.u
-
+SET IniChange="FALSE"
 ::
 :: MODYFING INI FILE TO ADD THE NEW MUTATOR
 ::
-set "InsertBeforeLine=73"
-set "LineCount=1"
+echo Veryfing %INI_FILE%
+if %IniChange%=="TRUE" (
+    :INI_CHANGE
+        xcopy /y %IniFileAux% %INI_FILE% 
+        GOTO CONTINUE
+)
+for /F "usebackq eol= delims=" %%L in (%INI_FILE%) do (
+    if %%L == ^;RenX_Mutator_Epic_Units (
+        GOTO CONTINUE
+    )
+)
 for /F "usebackq eol= delims=" %%L in (%INI_FILE%) do (
     echo %%L>>%IniFileAux%
-
     if %%L == +ModEditPackages^=RenX_GameX (
-            echo %MutatorIniFile%>>%IniFileAux%
+        echo %MutatorIniFilePhrase%>>%IniFileAux%
+        echo %MutatorIniFilePhraseComment%>>%IniFileAux%
     )
-    set /A "LineCount+=1"
 )
-echo %IniFileAux%
-echo %INI_FILE%
-xcopy /y %IniFileAux% %INI_FILE%
-del /f %IniFileAux%
+GOTO INI_CHANGE
+:CONTINUE
+    if exist del /f %IniFileAux%
 
+echo Compiling Mutator %MUTATOR_NAME%
 ::
 :: #COMPILING
 ::
