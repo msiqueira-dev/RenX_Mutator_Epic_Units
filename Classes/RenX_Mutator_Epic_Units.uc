@@ -21,6 +21,28 @@ function bool CheckReplacement(Actor Other)
     return true;
 }
 
+function OnPlayerKill(Controller Killer, Controller Victim, Pawn KilledPawn, class<DamageType> damageType)
+{
+	local Rx_Mutator Rx_Mut;
+
+	Rx_Mut = GetNextRxMutator();
+	if (Rx_Mut != None)
+	{
+    if(UTPawn(KilledPawn) != None)
+    {
+        if(UTPawn(KilledPawn).GetFamilyInfo() == class'RenX_Epic_Units_GDI_Armoured_Sydney')
+        {
+            Rx_Game(WorldInfo.Game).CTextBroadCast(3, ":" @ UTPawn(KilledPawn).GetFamilyInfo() @ "  Killed by " @ Killer.GetHumanReadableName(),'Red', 60.0, 3.0);
+        }
+        else if(UTPawn(KilledPawn).GetFamilyInfo() == class'RenX_Epic_Units_NOD_Raveshaw_Mutant')
+        {
+            Rx_Game(WorldInfo.Game).CTextBroadCast(3, ":" @ UTPawn(KilledPawn).GetFamilyInfo() @ "  Killed by " @ Killer.GetHumanReadableName(),'Yellow', 60.0, 3.0);
+        }
+    }
+		Rx_Mut.OnPlayerKill(Killer, Victim, KilledPawn, damageType);
+	}
+}
+
 defaultproperties
 {
    Name="RenX_Mutator_Epic_Units"

@@ -20,7 +20,7 @@ function PurchaseCharacter(Rx_Controller Buyer, int TeamID, class<Rx_FamilyInfo>
 		{
 			foreach `WorldInfoObject.AllControllers(class'Rx_Controller', PC)
 			{
-				if(TeamID == TEAM_GDI)
+				if(PC.GetTeamNum() == TEAM_GDI)
 					PC.ClientPlaySound(SoundCue'RX_WP_IonCannon.Sounds.SC_StrikImminent_Siren');
 			}
 			Rx_Game(WorldInfo.Game).CTextBroadCast(TeamID, "Armoured Sydney bought by" @ Buyer.GetHumanReadableName(),
@@ -30,7 +30,7 @@ function PurchaseCharacter(Rx_Controller Buyer, int TeamID, class<Rx_FamilyInfo>
 		{
 			foreach `WorldInfoObject.AllControllers(class'Rx_Controller', PC)
 			{
-				if(TeamID == TEAM_NOD)
+				if(PC.GetTeamNum() == TEAM_NOD)
 					PC.ClientPlaySound(SoundCue'RX_WP_IonCannon.Sounds.SC_StrikImminent_Siren');
 			}
 			Rx_Game(WorldInfo.Game).CTextBroadCast(TeamID, "Mutant Raveshaw bought by" @ Buyer.GetHumanReadableName(),

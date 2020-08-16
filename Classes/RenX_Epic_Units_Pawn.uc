@@ -7,6 +7,7 @@ simulated function bool TakeHeadShot(const out ImpactInfo Impact, class<DamageTy
 {
     local PlayerController PC;
     PC = PlayerController(Controller);
+    //Rx_Game(WorldInfo.Game).CTextBroadCast(3, "Test Headshot: " @ Rx_Pawn(PC.Pawn).GetRxFamilyInfo(),'Yellow', 60.0, 3.0);
     if(PC != None)
     {
         if(Rx_Pawn(PC.Pawn).GetRxFamilyInfo() == class'RenX_Epic_Units_GDI_Armoured_Sydney' ||
@@ -22,14 +23,15 @@ simulated function Tick(float DeltaTime)
     PC = PlayerController(Controller);
     if(PC != None)
     {
-        if(Rx_Pawn(PC.Pawn).GetRxFamilyInfo() != class'RenX_Epic_Units_Nod_Raveshaw_Mutant')
+        
+        if(Rx_Pawn(PC.Pawn).GetRxFamilyInfo() == class'RenX_Epic_Units_Nod_Raveshaw_Mutant')
         {
             StaminaRegenRate=25.0f;
             SprintSpeed=460.0;
         }
-        else if(Rx_Pawn(PC.Pawn).GetRxFamilyInfo() != class'RenX_Epic_Units_GDI_Armoured_Sydney')
+        else if(Rx_Pawn(PC.Pawn).GetRxFamilyInfo() == class'RenX_Epic_Units_GDI_Armoured_Sydney')
         {
-            StaminaRegenRate=8.0f;
+            StaminaRegenRate=6.0f;
             SprintSpeed=400.0;
         }
     }

@@ -31,10 +31,10 @@ DefaultProperties
 	VPCost(1) = 50
 	VPCost(2) = 110
 	
-	VPReward(0)=8
-	VPReward(1)=10
-	VPReward(2)=12
-	VPReward(3)=14
+	VPReward(0)=10
+	VPReward(1)=12
+	VPReward(2)=14
+	VPReward(3)=16
 	
 	//+X
 	Vet_HealthMod(0)=0

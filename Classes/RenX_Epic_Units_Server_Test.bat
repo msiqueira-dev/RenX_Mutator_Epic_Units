@@ -2,15 +2,16 @@
 ::
 :: VARIABLES
 ::
-SET ServerName=Merak_Hagen_Epic_Units
-SET Password=Test
+SET MUTATOR_WITH_PACKAGE=RenX_Mutator_Epic_Units.RenX_Mutator_Epic_Units 
+SET SERVER_NAME=Merak_Hagen_Epic_Units
+SET PASSWORD=Test
 ::
 :: END OF VARIBLES
 ::
 
 setlocal enableextensions disabledelayedexpansion
 set "search=RenegadeXServer"
-set "replace=%ServerName%"
+set "replace=%SERVER_NAME%"
 set "textFile=E:\Games\Renegade-X\UDKGame\Config\UDKGame.ini"
 for /f "delims=" %%i in ('type "%textFile%" ^& break ^> "%textFile%" ') do (
         set "line=%%i"
@@ -20,12 +21,12 @@ for /f "delims=" %%i in ('type "%textFile%" ^& break ^> "%textFile%" ') do (
     )
 SET a=start UDK.exe server
 SET a=%a% CNC-Walls?
-SET a=%a%mutator=RenX_Epic_Units_Package.RenX_Epic_Units_Mutator?
+SET a=%a%mutator=MUTATOR_WITH_PACKAGE?
 SET a=%a%maxplayers=64?
 SET a=%a%bRequiresPassword=1?
 SET a=%a%?AdminPassword=TestAdmin?
-SET a=%a%?GAMEPASSWORD=%Password%?
-SET a=%a%ServerName="Merak_Hagen_Epic_Units"?
+SET a=%a%?GAMEPASSWORD=%PASSWORD%?
+SET a=%a%SERVER_NAME="Merak_Hagen_Epic_Units"?
 SET a=%a%GameName="Merak_Hagen_Epic_Units"?
 SET a=%a%TimeLimit=0?
 SET a=%a%ServerDescription="Merak_Hagen_Epic_Units"?
@@ -34,4 +35,4 @@ echo.
 echo %a%
 echo.
 %a%
-::UDK.exe 127.0.0.1?password=%Password%
+::UDK.exe 127.0.0.1?PASSWORD=%PASSWORD%
