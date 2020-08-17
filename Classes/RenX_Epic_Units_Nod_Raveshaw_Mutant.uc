@@ -8,7 +8,7 @@ DefaultProperties
 	JumpMultiplier          = 1.5
 	FallspeedModifier       = 1.0
 
-	BasePurchaseCost		= 2500
+	BasePurchaseCost		= 2400
 	PT_Damage			= 6
 	PT_Range			= 5
 	PT_RateOfFire		= 2
@@ -46,7 +46,7 @@ DefaultProperties
 	Vet_SprintSpeedMod(0)=0
 	Vet_SprintSpeedMod(1)=0.030
 	Vet_SprintSpeedMod(2)=0.060
-	Vet_SprintSpeedMod(3)=0.085
+	Vet_SprintSpeedMod(3)=0.080
 	
 	/******************/
 	PTString="Buy Commando Mutant Raveshaw"

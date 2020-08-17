@@ -3,15 +3,12 @@ class RenX_Epic_Units_Pawn extends Rx_Pawn;
 
 var const float MaxStaminaMutantRaveshaw;
 
-simulated function bool TakeHeadShot(const out ImpactInfo Impact, class<DamageType> HeadShotDamageType, int HeadDamage, float AdditionalScale, controller InstigatingController, bool bRocketDamage, optional Weapon ProjectileWeapon)
+event TakeDamage(int Damage, Controller EventInstigator, vector HitLocation, vector Momentum, class<DamageType> DamageType, optional TraceHitInfo HitInfo, optional Actor DamageCauser)
 {
-    if(InstigatingController != None)
-    {
-        if(Rx_Pawn(InstigatingController.Pawn).GetRxFamilyInfo() == class'RenX_Epic_Units_GDI_Armoured_Sydney' ||
-        Rx_Pawn(InstigatingController.Pawn).GetRxFamilyInfo() == class'RenX_Epic_Units_Nod_Raveshaw_Mutant')
-            return false;
-    }
-    return super.TakeHeadShot(Impact, HeadShotDamageType, HeadDamage,AdditionalScale,InstigatingController, bRocketDamage, ProjectileWeapon);
+    //Rx_Pawn(EventInstigator.Pawn).GetRxFamilyInfo() = Who Hit
+    //Rx_Game(WorldInfo.Game).CTextBroadCast(3, "Test: " @HitInfo.BoneName,'Yellow', 60.0, 3.0); //b_head
+    
+    super.takeDamage(damage, EventInstigator,HitLocation,Momentum,DamageType,HitInfo,DamageCauser);
 }
 
 simulated function Tick(float DeltaTime)

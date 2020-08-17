@@ -7,7 +7,7 @@ DefaultProperties
 	SpeedMultiplier			= 0.95
 	FallspeedModifier       = 2.0
 	
-	BasePurchaseCost		= 2500
+	BasePurchaseCost		= 2400
 	PT_Damage			= 6
 	PT_Range			= 5
 	PT_RateOfFire		= 2

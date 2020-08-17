@@ -66,7 +66,7 @@ if NOT %UserChoice%==Y (GOTO End)
 :: #COPY AND EXEC
 ::
 SET COMMAND_CP=xcopy /y %UdkFolderCompiledMutator% %RenXPathCompiledMutator%
-SET COMMAND_EXEC=%UDK_PATH%\Binaries\Win64\UDK.exe %MAP%?mutator=%MUTATOR_NAME%.%MUTATOR_PACKAGE_NAME% -nomovies
+SET COMMAND_EXEC=%UDK_PATH%\Binaries\Win64\UDK.exe %MAP%?mutator=%MUTATOR_NAME%.%MUTATOR_PACKAGE_NAME% -nomovies -log -windowed
 %COMMAND_CP%
 echo.
 echo File Copied to RenX Mutator Folder

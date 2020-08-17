@@ -8,12 +8,12 @@ Mutator for Renegade-X Game to make available in game purchase of GDI Amoured Sy
     &emsp;&emsp;Descritpion: Armoured Sydney is a tech unit, anti everything, focused on benefits of an armour tech suit.
     While the armor is heavy, it offers protection, and some abilities of its own. Because she is wearing a heavy suit, she
     will get slower and feel it heavy, but will have a lot of improvements from it</br>
-    &emsp;Price: 2.500 Credits</br>
+    &emsp;Price: 2.400 Credits</br>
     &emsp;Health: 100</br>
     &emsp;Armor: 600</br>
     &emsp;Base Speed: 0.95</br>
     &emsp;Fall Speed Modifier: 2.0</br>
-    &emsp;Stamina Regen Rate:8.0 (Common units are 10.0)</br>
+    &emsp;Stamina Regen Rate:6.0 (Common units are 10.0)</br>
     &emsp;Sprint Speed:400.0 (Common units are 420)</br>
     &emsp;Passive Ability:</br>
         &emsp;&emsp;Regen 5 Armor every 2 seconds.</br>
@@ -31,7 +31,6 @@ Mutator for Renegade-X Game to make available in game purchase of GDI Amoured Sy
         &emsp;&emsp;More Ammunition</br>
         &emsp;&emsp;More Armour</br>
         &emsp;&emsp;Regen Armour Passive Ability</br>
-        &emsp;&emsp;Headshot extra damage Immunity</br>
         &emsp;&emsp;Ran Over by Vehicle Immunity</br>
         &emsp;&emsp;Less Fall Damage</br>
         &emsp;&emsp;Sprint is slower (Sprint is used by shift key)</br>
@@ -42,7 +41,7 @@ Mutator for Renegade-X Game to make available in game purchase of GDI Amoured Sy
 - Mutant Raveshaw:</br>
     &emsp;&emsp;Descritpion: A mutant, genetic modifed unit, a super human, being able to be faster, to jump higher, and have
     much more mobility than any other human</br>
-    &emsp;Price: 2.500 Credits</br>
+    &emsp;Price: 2.400 Credits</br>
     &emsp;Health: 600</br>
     &emsp;Armor: 100</br>
     &emsp;Base Speed: 1.15</br>
@@ -65,7 +64,6 @@ Mutator for Renegade-X Game to make available in game purchase of GDI Amoured Sy
         &emsp;&emsp;More Ammunition</br>
         &emsp;&emsp;More Health</br>
         &emsp;&emsp;Regen Health Passive Ability</br>
-        &emsp;&emsp;Headshot extra damage Immunity</br>
         &emsp;&emsp;Ran Over by Vehicle Immunity</br>
         &emsp;&emsp;More Speed</br>
         &emsp;&emsp;Increased stamina regen rate</br>

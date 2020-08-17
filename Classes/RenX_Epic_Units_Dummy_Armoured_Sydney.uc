@@ -31,6 +31,6 @@ simulated static function string GetPurchaseDescription()
 DefaultProperties
 {
     CustomWeaponName = "Armoured Sydney";
-    Price = 2500;
+    Price = 2400;
     PTIconTexture = Texture2D'RenXPurchaseMenu.T_Icon_Weapon_PIC';
 }
