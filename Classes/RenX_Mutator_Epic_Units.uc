@@ -28,7 +28,7 @@ function OnPlayerKill(Controller Killer, Controller Victim, Pawn KilledPawn, cla
     super.OnPlayerKill(Killer, Victim, KilledPawn, damageType);
 	if(UTPawn(KilledPawn).GetFamilyInfo() == class'RenX_Epic_Units_GDI_Armoured_Sydney')
     {
-        Rx_Game(WorldInfo.Game).CTextBroadCast(3, "Armoured Sydney  Killed by " @ Killer.GetHumanReadableName(),'Red', 60.0, 3.0);
+        Rx_Game(WorldInfo.Game).CTextBroadCast(3, "Armoured Sydney  Killed by" @ Killer.GetHumanReadableName(),'Red', 60.0, 3.0);
         foreach `WorldInfoObject.AllControllers(class'Rx_Controller', PC)
         {
             if(PC.GetTeamNum() == TEAM_GDI)
@@ -37,7 +37,7 @@ function OnPlayerKill(Controller Killer, Controller Victim, Pawn KilledPawn, cla
     }
     if(UTPawn(KilledPawn).GetFamilyInfo() == class'RenX_Epic_Units_NOD_Raveshaw_Mutant')
     {
-        Rx_Game(WorldInfo.Game).CTextBroadCast(3, "Mutant Raveshaw  Killed by " @ Killer.GetHumanReadableName(),'Yellow', 60.0, 3.0);
+        Rx_Game(WorldInfo.Game).CTextBroadCast(3, "Mutant Raveshaw  Killed by" @ Killer.GetHumanReadableName(),'Yellow', 60.0, 3.0);
         foreach `WorldInfoObject.AllControllers(class'Rx_Controller', PC)
         {
             if(PC.GetTeamNum() == TEAM_GDI)

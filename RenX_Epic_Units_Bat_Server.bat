@@ -2,9 +2,17 @@
 ::
 :: VARIABLES
 ::
-SET MUTATOR_WITH_PACKAGE=RenX_Mutator_Epic_Units.RenX_Mutator_Epic_Units 
+SET INITIAL_CREDITS=10000
+SET MAP=CNC-Walls
+SET MAX_PLAYERS=64
+SET MUTATOR_NAME=RenX_Mutator_Epic_Units
+SET MUTATOR_PACKAGE_NAME=RenX_Mutator_Epic_Units
+SET RENX_PATH=E:\Games\Renegade-X\
 SET SERVER_NAME=Merak_Hagen_Epic_Units
-SET PASSWORD=Test
+SET PASSWORD=
+SET PASSWORD_ADMIN=TestAdmin
+SET PASSWORD_REQUIRE=0
+SET TIME_LIMIT=0
 ::
 :: END OF VARIBLES
 ::
@@ -19,20 +27,21 @@ for /f "delims=" %%i in ('type "%textFile%" ^& break ^> "%textFile%" ') do (
         >>"%textFile%" echo(!line:%search%=%replace%!
         endlocal
     )
-SET a=start UDK.exe server
-SET a=%a% CNC-Walls?
-SET a=%a%mutator=MUTATOR_WITH_PACKAGE?
-SET a=%a%maxplayers=64?
-SET a=%a%bRequiresPassword=1?
-SET a=%a%?AdminPassword=TestAdmin?
-SET a=%a%?GAMEPASSWORD=%PASSWORD%?
+SET a=start %RENX_PATH%\Binaries\Win64\UDK.exe server
+SET a=%a% %MAP%?
+SET a=%a%mutator=%MUTATOR_NAME%.%MUTATOR_PACKAGE_NAME%?
+SET a=%a%maxplayers=%MAX_PLAYERS%?
+SET a=%a%bRequiresPassword=%PASSWORD_REQUIRE%?
+SET a=%a%AdminPassword=%PASSWORD_ADMIN%?
+SET a=%a%GAMEPASSWORD=%PASSWORD%?
+SET a=%a%InitialCredits=%INITIAL_CREDITS%
 SET a=%a%SERVER_NAME="Merak_Hagen_Epic_Units"?
 SET a=%a%GameName="Merak_Hagen_Epic_Units"?
-SET a=%a%TimeLimit=0?
+SET a=%a%TimeLimit=%TIME_LIMIT%?
 SET a=%a%ServerDescription="Merak_Hagen_Epic_Units"?
 SET a=%a%-port=7777
 echo.
-echo %a%
+echo %a% -nosteam
 echo.
-%a%
+%a% -nosteam
 ::UDK.exe 127.0.0.1?PASSWORD=%PASSWORD%
