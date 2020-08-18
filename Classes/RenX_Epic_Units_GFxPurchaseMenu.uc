@@ -2,37 +2,47 @@ class RenX_Epic_Units_GFxPurchaseMenu extends Rx_GFxPurchaseMenu;
 
 function TickHUD() 
 {
-	local Rx_Controller PC;
+	local Rx_Pawn Pawn;
 	local bool foundSydney;
 	local bool foundRaveshaw;
-
-	if(PC != None)
-    {
-		foreach `WorldInfoObject.AllControllers(class'Rx_Controller', PC)
-		{
-			if(Rx_Pawn(PC.Pawn).GetRxFamilyInfo() == class'RenX_Epic_Units_GDI_Armoured_Sydney'
-			|| Rx_Pawn(PC.Pawn).GetRxFamilyInfo() == class'RenX_Epic_Units_Dummy_Armoured_Sydney')
-			{
-				ItemMenuButton[3].SetBool("enabled", false);
-				foundSydney = true;
-			}
-			else if(Rx_Pawn(PC.Pawn).GetRxFamilyInfo() == class'RenX_Epic_Units_Nod_Raveshaw_Mutant'
-			|| Rx_Pawn(PC.Pawn).GetRxFamilyInfo() == class'RenX_Epic_Units_Dummy_Mutant_Raveshaw')
-			{
-				ItemMenuButton[3].SetBool("enabled", false);
-				foundRaveshaw = false;
-			}
-		}
-		if(foundSydney == false)
-			ItemMenuButton[3].SetBool("enabled", true);
-		if(foundRaveshaw == false)
-			ItemMenuButton[3].SetBool("enabled", true);
-	}
 	super.TickHUD();
+	
+	if(TeamID == TEAM_GDI)
+	{
+		if(RenX_Epic_Units_PurchaseSystem(rxPurchaseSystem).CheckGDIEpicUnitDisable() == true)
+			ItemMenuButton[3].SetBool("enabled", false);
+			return;
+	}
+	else if(TeamID == TEAM_NOD)
+	{
+		if(RenX_Epic_Units_PurchaseSystem(rxPurchaseSystem).CheckNodEpicUnitDisable() == true)
+			ItemMenuButton[3].SetBool("enabled", false);
+			return;
+	}
+
+	foreach `WorldInfoObject.AllPawns(class'Rx_Pawn', Pawn)
+	{
+		if(Pawn.GetRxFamilyInfo() == class'RenX_Epic_Units_GDI_Armoured_Sydney'
+		|| Pawn.GetRxFamilyInfo() == class'RenX_Epic_Units_Dummy_Armoured_Sydney')
+		{
+			foundSydney = true;
+		}
+		else if(Pawn.GetRxFamilyInfo() == class'RenX_Epic_Units_Nod_Raveshaw_Mutant'
+		|| Pawn.GetRxFamilyInfo() == class'RenX_Epic_Units_Dummy_Mutant_Raveshaw')
+		{
+			foundRaveshaw = false;
+		}
+	}
+	if(foundSydney == false && TeamId == TEAM_GDI)
+		ItemMenuButton[3].SetBool("enabled", true);
+	else if(foundSydney == true && TeamId == TEAM_GDI)
+		ItemMenuButton[3].SetBool("enabled", false);
+	if(foundRaveshaw == false && TeamId == TEAM_NOD)
+		ItemMenuButton[3].SetBool("enabled", true);
+	else if(foundRaveshaw == true && TeamId == TEAM_NOD)
+		ItemMenuButton[3].SetBool("enabled", false);
 }
 
 DefaultProperties
 {
-	//GDIMainMenuData(8) = (BlockType=EPBT_MENU,  id=-1, PTIconTexture=Texture2D'RenXPurchaseMenu.T_Icon_ItemsNod', iconID=04, hotkey="Q", title="Items and More", desc="\n\nSuperweapons\nEquipments\nEpic Unit",														cost="MENU", type=1 )
-	//NodMainMenuData(8) = (BlockType=EPBT_MENU,  id=-1, PTIconTexture=Texture2D'RenXPurchaseMenu.T_Icon_ItemsNod', iconID=04, hotkey="Q", title="Items and More", desc="\n\nSuperweapons\nEquipments\nEpic Unit",														cost="MENU", type=1 )
 }

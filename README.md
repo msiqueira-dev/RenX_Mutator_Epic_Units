@@ -23,7 +23,7 @@ Mutator for Renegade-X Game to make available in game purchase of GDI Amoured Sy
     &emsp;Weapons:</br>
         &emsp;&emsp;Improved Personal Ion Cannon (Higher range, less fire delay, with ranks get second shoot and more ammo)</br>
         &emsp;&emsp;Special Carbine (Increased range, little more damage, more clip size)</br>
-        &emsp;&emsp;Improved EMP Grenade (Cooldown decreased to 40 seconds)</br>
+        &emsp;&emsp;Improved EMP Grenade (Cooldown decreased to 35 seconds)</br>
         &emsp;&emsp;Double Timed C4s</br>
         &emsp;&emsp;Tiberium AutoRifle (as default)</br>
     &emsp;Improvements and modifications from Crate Armoured Sydney:</br>

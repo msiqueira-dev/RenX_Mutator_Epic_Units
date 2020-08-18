@@ -3,5 +3,5 @@ class RenX_Epic_Units_WeaponAbility_EMPGrenade extends Rx_WeaponAbility_EMPGrena
 DefaultProperties
 {
     CustomWeaponName = "Improved EMP Grenade";
-    RechargeRate = 40;
+    RechargeRate = 35;
 }

@@ -13,6 +13,7 @@ class RenX_Mutator_Epic_Units extends Rx_Mutator;
 
 function bool CheckReplacement(Actor Other) 
 {
+    `Log("Starting Epic Units");
     Rx_Game(WorldInfo.Game).DefaultPawnClass = class'RenX_Epic_Units_Pawn';
     Rx_Game(WorldInfo.Game).HudClass = class'RenX_Epic_Units_HUD';
 

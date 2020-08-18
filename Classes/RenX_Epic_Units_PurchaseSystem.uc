@@ -1,5 +1,15 @@
 class RenX_Epic_Units_PurchaseSystem extends Rx_PurchaseSystem;
 
+simulated function bool CheckGDIEpicUnitDisable()
+{
+	return AreHighTierPayClassesDisabled(TEAM_GDI);
+}
+
+simulated function bool CheckNodEpicUnitDisable()
+{
+	return AreHighTierPayClassesDisabled(TEAM_NOD);
+}
+
 function PurchaseCharacter(Rx_Controller Buyer, int TeamID, class<Rx_FamilyInfo> CharacterClass)
 {
     local Rx_Controller PC;
@@ -38,16 +48,6 @@ function PurchaseCharacter(Rx_Controller Buyer, int TeamID, class<Rx_FamilyInfo>
 		}
     }
 	super.PurchaseCharacter(Buyer, TeamID, CharacterClass);
-}
-
-simulated function bool IsItemBuyable (Rx_Controller Player, byte teamID, int charid)
-{
-	local class<Rx_Weapon> W;
-	W = GetItemClass(teamID, charid);
-	if(AreHighTierPayClassesDisabled(teamID) && 
-	  (W==class'RenX_Epic_Units_Dummy_Mutant_Raveshaw' || W==class'RenX_Epic_Units_Dummy_Armoured_Sydney'))
-		return false;
-	return Rx_InventoryManager(Player.Pawn.InvManager).IsItemAllowed(W) && W.static.IsBuyable(Player);
 }
 
 function PurchaseItem(Controller Buyer, int TeamID, int ItemID)
