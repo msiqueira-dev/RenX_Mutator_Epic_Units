@@ -1,4 +1,4 @@
-class RenX_Epic_Units_GDI_Armoured_Sydney extends Rx_FamilyInfo_GDI_Sydney_Suit;
+class RenX_Epic_Units_GDI_Armored_Sydney extends Rx_FamilyInfo_GDI_Sydney_Suit;
 
 DefaultProperties
 {
@@ -21,7 +21,7 @@ DefaultProperties
 	ImmuneTo[5]	= class'Rx_DmgType_RanOver'
 	ImmuneTo[6]	= class'Rx_DmgType_Pancake'
 
-	InvManagerClass = class'RenX_Epic_Units_InventoryManager_GDI_Armoured_Sydney'
+	InvManagerClass = class'RenX_Epic_Units_InventoryManager_GDI_Armored_Sydney'
 	
 	/***********/
 	/*Veterancy*/
@@ -49,6 +49,6 @@ DefaultProperties
 	Vet_SprintSpeedMod(3)=0.075
 	
 	/******************/
-	PTString="Buy Commando Armoured Sydney"
-	PassiveAbilities(0)=class'RenX_Epic_Units_PassiveAbility_ArmourRegen'
+	PTString="Buy Commando Armored Sydney"
+	PassiveAbilities(0)=class'RenX_Epic_Units_PassiveAbility_ArmorRegen'
 }

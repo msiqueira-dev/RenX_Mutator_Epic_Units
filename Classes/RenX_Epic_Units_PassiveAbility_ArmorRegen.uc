@@ -1,4 +1,4 @@
-class RenX_Epic_Units_PassiveAbility_ArmourRegen extends Rx_PassiveAbility;
+class RenX_Epic_Units_PassiveAbility_ArmorRegen extends Rx_PassiveAbility;
 
 var int TickHealthHealAmount;
 var float TickInterval;

@@ -4,8 +4,8 @@ Mutator for Renegade-X Game to make available in game purchase of GDI Amoured Sy
 ------</br>
 # Current Epic Units Stats:
 </br>
-- Armoured Sydney:</br>
-    &emsp;&emsp;Descritpion: Armoured Sydney is a tech unit, anti everything, focused on benefits of an armour tech suit.
+- Armored Sydney:</br>
+    &emsp;&emsp;Descritpion: Armored Sydney is a tech unit, anti everything, focused on benefits of an armor tech suit.
     While the armor is heavy, it offers protection, and some abilities of its own. Because she is wearing a heavy suit, she
     will get slower and feel it heavy, but will have a lot of improvements from it</br>
     &emsp;Price: 2.400 Credits</br>
@@ -26,11 +26,11 @@ Mutator for Renegade-X Game to make available in game purchase of GDI Amoured Sy
         &emsp;&emsp;Improved EMP Grenade (Cooldown decreased to 35 seconds)</br>
         &emsp;&emsp;Double Timed C4s</br>
         &emsp;&emsp;Tiberium AutoRifle (as default)</br>
-    &emsp;Improvements and modifications from Crate Armoured Sydney:</br>
+    &emsp;Improvements and modifications from Crate Armored Sydney:</br>
         &emsp;&emsp;Improved Weapons and Extra Weapons</br>
         &emsp;&emsp;More Ammunition</br>
-        &emsp;&emsp;More Armour</br>
-        &emsp;&emsp;Regen Armour Passive Ability</br>
+        &emsp;&emsp;More Armor</br>
+        &emsp;&emsp;Regen Armor Passive Ability</br>
         &emsp;&emsp;Ran Over by Vehicle Immunity</br>
         &emsp;&emsp;Less Fall Damage</br>
         &emsp;&emsp;Sprint is slower (Sprint is used by shift key)</br>
@@ -44,21 +44,20 @@ Mutator for Renegade-X Game to make available in game purchase of GDI Amoured Sy
     &emsp;Price: 2.400 Credits</br>
     &emsp;Health: 600</br>
     &emsp;Armor: 100</br>
-    &emsp;Base Speed: 1.15</br>
+    &emsp;Base Speed: 1.16</br>
     &emsp;Fall Speed Modifier: 1.1</br>
     &emsp;Jump Modifier: 1.5</br>
     &emsp;Stamina Regen Rate:25.0</br>
     &emsp;Sprint Speed:460.0;</br>
     &emsp;Passive Ability:</br>
-        &emsp;&emsp;Regen 5 Health every 2 seconds.</br>
+        &emsp;&emsp;Regen 6 Health every 2 seconds.</br>
         &emsp;&emsp;Stamina Regen rate is 25.0 (Normal is 10).</br>
         &emsp;&emsp;Immunity to Tiberium fields and Tiberium Weapons</br>
         &emsp;&emsp;Immunity to vehicles ran over</br>
-        &emsp;&emsp;Immunity to heashot extra damage</br>
     &emsp;Weapons:</br>
-        &emsp;&emsp;Improved Rail Gun (Higher range, less fire delay, with ranks increases clip size and ammo)</br>
-        &emsp;&emsp;Special Heavy Pistol (Increased range, damage, clip size and rate of fire)</br>
-        &emsp;&emsp;Tiberium AutoRifle (as default)</br>
+        &emsp;&emsp;Improved Rail Gun (Higher range, less reload time, less equip time, with ranks increases clip size and ammo)</br>
+        &emsp;&emsp;Special Heavy Pistol (Increased range, damage, clip size, rate of fire, reload time and equip time)</br>
+        &emsp;&emsp;Raveshaw's Tiberium Rifle (Reloads faster, equipe faster, very little more damage) </br>
     &emsp;Improvement from Crate Mutant Raveshaw:</br>
         &emsp;&emsp;Improved Weapons and Extra Weapons</br>
         &emsp;&emsp;More Ammunition</br>
@@ -67,7 +66,7 @@ Mutator for Renegade-X Game to make available in game purchase of GDI Amoured Sy
         &emsp;&emsp;Ran Over by Vehicle Immunity</br>
         &emsp;&emsp;More Speed</br>
         &emsp;&emsp;Increased stamina regen rate</br>
-        &emsp;&emsp;Jumps Twices the height</br>
+        &emsp;&emsp;Jumps higher</br>
         &emsp;&emsp;Less fall damage</br>
         &emsp;&emsp;Sprint increases with rank</br>
     &emsp;Retrictions:</br>

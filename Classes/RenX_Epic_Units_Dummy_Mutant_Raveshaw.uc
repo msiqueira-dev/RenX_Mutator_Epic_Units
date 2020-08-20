@@ -25,7 +25,7 @@ simulated static function string GetPurchaseTitle()
 
 simulated static function string GetPurchaseDescription()
 {
-    return "Armour: Flak\nSpeed: 110\nTiberium A.Rifle, Special H.Pistol\nEMP Grenade\nAnti-Tank Mines\n+Anti-Armour";
+    return "Armor: Flak\nSpeed: 110\nTiberium A.Rifle, Special H.Pistol\nEMP Grenade\nAnti-Tank Mines\n+Anti-Armor";
 }
 
 DefaultProperties

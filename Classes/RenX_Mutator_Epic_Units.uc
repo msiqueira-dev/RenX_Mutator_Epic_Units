@@ -4,18 +4,13 @@ class RenX_Mutator_Epic_Units extends Rx_Mutator;
     Author: Merak_Hagen
     Description: Main Class the starts the Mutator.
         - Changes the PurchaseSystem for a custom one, contaning a modified version of 
-          Armoured Sydney for GDI and Mutant Raveshaw for NOD.
-        - Changes the guns used both by modified Armoured Sydney and Mutant Raveshaw to custom made version of
-          Personal Ion Cannon and RailGun, add an extra weapon to each character, Armoured Sydney gets an
-          Improved Carbine and Raveshaw get an Improved HeavyPistol
+          Armored Sydney for GDI and Mutant Raveshaw for NOD.
 *
 */
 
 function bool CheckReplacement(Actor Other) 
 {
     `Log("Starting Epic Units");
-    `Log(string(Rx_Game(WorldInfo.Game).WorldInfo.GetMapName));
-    `Log(InStr((Rx_Game(WorldInfo.Game).WorldInfo.GetMapName), "BH"));
     
     if (InStr(WorldInfo.GetMapName(true), "BH-") == -1)
     {
@@ -30,9 +25,9 @@ function bool CheckReplacement(Actor Other)
 function OnPlayerKill(Controller Killer, Controller Victim, Pawn KilledPawn, class<DamageType> damageType)
 {
     super.OnPlayerKill(Killer, Victim, KilledPawn, damageType);
-	if(UTPawn(KilledPawn).GetFamilyInfo() == class'RenX_Epic_Units_GDI_Armoured_Sydney')
+	if(UTPawn(KilledPawn).GetFamilyInfo() == class'RenX_Epic_Units_GDI_Armored_Sydney')
     {
-        Rx_Game(WorldInfo.Game).CTextBroadCast(3, "Armoured Sydney  Killed by" @ Killer.GetHumanReadableName(),'Red', 60.0, 3.0);
+        Rx_Game(WorldInfo.Game).CTextBroadCast(3, "Armored Sydney  Killed by" @ Killer.GetHumanReadableName(),'Red', 60.0, 3.0);
     }
     if(UTPawn(KilledPawn).GetFamilyInfo() == class'RenX_Epic_Units_NOD_Raveshaw_Mutant')
     {

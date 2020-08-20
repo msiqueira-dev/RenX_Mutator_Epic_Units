@@ -4,7 +4,7 @@ DefaultProperties
 {
 	MaxHealth               = 600
 	MaxArmor               	= 100
-	SpeedMultiplier			= 1.15
+	SpeedMultiplier			= 1.16
 	JumpMultiplier          = 1.5
 	FallspeedModifier       = 1.0
 
@@ -44,9 +44,9 @@ DefaultProperties
 	
 	//+X
 	Vet_SprintSpeedMod(0)=0
-	Vet_SprintSpeedMod(1)=0.030
-	Vet_SprintSpeedMod(2)=0.060
-	Vet_SprintSpeedMod(3)=0.080
+	Vet_SprintSpeedMod(1)=0.035
+	Vet_SprintSpeedMod(2)=0.065
+	Vet_SprintSpeedMod(3)=0.085
 	
 	/******************/
 	PTString="Buy Commando Mutant Raveshaw"
