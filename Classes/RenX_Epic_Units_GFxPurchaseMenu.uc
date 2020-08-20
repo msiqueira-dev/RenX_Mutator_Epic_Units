@@ -27,7 +27,11 @@ function TickHUD()
 			return;
 		}
 	}
-
+	if(PlayerCredits < 2399)
+	{
+		ItemMenuButton[3].SetBool("enabled", false);
+		return;
+	}
 	foreach `WorldInfoObject.AllPawns(class'Rx_Pawn', Pawn)
 	{
 		if(Pawn.GetRxFamilyInfo() == class'RenX_Epic_Units_GDI_Armored_Sydney'
@@ -42,8 +46,6 @@ function TickHUD()
 		}
 		numPlayers = numPlayers +1;
 	}
-	`Log(numPlayers);
-	`Log(MinimumPlayersForEpicUnits);
 	if(numPlayers < MinimumPlayersForEpicUnits+1)
 	{
 		ItemMenuButton[3].SetString("sublabel", MinimumPlayersForEpicUnits $ " Players needed for Epic Unit to be available");
@@ -52,11 +54,15 @@ function TickHUD()
 	else 
 	{
 		if(foundSydney == false && TeamId == TEAM_GDI)
+		{
 			ItemMenuButton[3].SetBool("enabled", true);
+		}
 		else if(foundSydney == true && TeamId == TEAM_GDI)
 			ItemMenuButton[3].SetBool("enabled", false);
 		if(foundRaveshaw == false && TeamId == TEAM_NOD)
+		{
 			ItemMenuButton[3].SetBool("enabled", true);
+		}
 		else if(foundRaveshaw == true && TeamId == TEAM_NOD)
 			ItemMenuButton[3].SetBool("enabled", false);
 	}
