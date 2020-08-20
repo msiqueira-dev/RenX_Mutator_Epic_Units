@@ -16,7 +16,7 @@ Mutator for Renegade-X Game to make available in game purchase of GDI Amoured Sy
     &emsp;Stamina Regen Rate:6.0 (Common units are 10.0)</br>
     &emsp;Sprint Speed:400.0 (Common units are 420)</br>
     &emsp;Passive Ability:</br>
-        &emsp;&emsp;Regen 5 Armor every 2 seconds.</br>
+        &emsp;&emsp;Regen 6 Armor every 2 seconds.</br>
         &emsp;&emsp;Immunity to Tiberium fields and Tiberium Weapons</br>
         &emsp;&emsp;Immunity to vehicles ran over</br>
         &emsp;&emsp;Immunity to heashot extra damage</br>
