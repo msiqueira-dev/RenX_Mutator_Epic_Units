@@ -27,6 +27,6 @@ function HealHealth()
 
 DefaultProperties
 {
-    TickHealthHealAmount=5
+    TickHealthHealAmount=6
     TickInterval=2.0f
 }

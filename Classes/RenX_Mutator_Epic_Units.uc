@@ -14,36 +14,29 @@ class RenX_Mutator_Epic_Units extends Rx_Mutator;
 function bool CheckReplacement(Actor Other) 
 {
     `Log("Starting Epic Units");
-    Rx_Game(WorldInfo.Game).DefaultPawnClass = class'RenX_Epic_Units_Pawn';
-    Rx_Game(WorldInfo.Game).HudClass = class'RenX_Epic_Units_HUD';
-
-    if(Other.IsA('Rx_TeamInfo')) 
-        Rx_Game(WorldInfo.Game).PurchaseSystemClass = class'RenX_Epic_Units_PurchaseSystem';
+    `Log(string(Rx_Game(WorldInfo.Game).WorldInfo.GetMapName));
+    `Log(InStr((Rx_Game(WorldInfo.Game).WorldInfo.GetMapName), "BH"));
+    
+    if (InStr(WorldInfo.GetMapName(true), "BH-") == -1)
+    {
+        Rx_Game(WorldInfo.Game).DefaultPawnClass = class'RenX_Epic_Units_Pawn';
+        Rx_Game(WorldInfo.Game).HudClass = class'RenX_Epic_Units_HUD';
+        if(Other.IsA('Rx_TeamInfo')) 
+            Rx_Game(WorldInfo.Game).PurchaseSystemClass = class'RenX_Epic_Units_PurchaseSystem';
+    }
     return true;
 }
 
 function OnPlayerKill(Controller Killer, Controller Victim, Pawn KilledPawn, class<DamageType> damageType)
 {
-    local Rx_Controller PC;
-
     super.OnPlayerKill(Killer, Victim, KilledPawn, damageType);
 	if(UTPawn(KilledPawn).GetFamilyInfo() == class'RenX_Epic_Units_GDI_Armoured_Sydney')
     {
         Rx_Game(WorldInfo.Game).CTextBroadCast(3, "Armoured Sydney  Killed by" @ Killer.GetHumanReadableName(),'Red', 60.0, 3.0);
-        foreach `WorldInfoObject.AllControllers(class'Rx_Controller', PC)
-        {
-            if(PC.GetTeamNum() == TEAM_GDI)
-                PC.ClientPlaySound(SoundCue'RX_WP_IonCannon.Sounds.SC_StrikImminent_Siren');
-        }
     }
     if(UTPawn(KilledPawn).GetFamilyInfo() == class'RenX_Epic_Units_NOD_Raveshaw_Mutant')
     {
         Rx_Game(WorldInfo.Game).CTextBroadCast(3, "Mutant Raveshaw  Killed by" @ Killer.GetHumanReadableName(),'Yellow', 60.0, 3.0);
-        foreach `WorldInfoObject.AllControllers(class'Rx_Controller', PC)
-        {
-            if(PC.GetTeamNum() == TEAM_GDI)
-                PC.ClientPlaySound(SoundCue'RX_WP_IonCannon.Sounds.SC_StrikImminent_Siren');
-        }
     }
 }
 
